@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  postgres: 
+    image: postgres:latest
+    restart: always
+    environment: 
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGPASSWORD: admin
+      POSTGRES_DB: sample_database
+  ports: 
+    - 5432:5432
+  volumes: 
+    - db-data:/var/lib/postgresql/data
+
+  api:
+    tty: true
+    depends_on: 
+      - db
+    build: 
+      context: ./api/
+      dockerfile: Dockerfile
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./api:/app/
+    command: 'rails server -b 0.0.0.0'
+  front: 
+    build: 
+      context: ./front/
+      dockerfile: Dockerfile
+    volumes: 
+      - ./front/app:/usr/src/app
+    command: sh -c "cd front && npm run dev"
+    ports:
+      - "3000:3000"
+
+volumes: 
+  db-volumes: 
+  driver: local
+
