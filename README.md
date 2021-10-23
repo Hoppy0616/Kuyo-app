@@ -19,5 +19,6 @@ Docker
 docker-compose
 ### Front App
 - Next.js(using typescript)
+- tailWindCSS
 ### Backend App
 - Ruby on Rails (6.1.0,use api mode)
