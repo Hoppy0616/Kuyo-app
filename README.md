@@ -1,5 +1,5 @@
 <h1 style="text-align: center"> Kuyo-app</h1>
-
+⚠️ This app is in development!
 ## Overview
 This app is a web application for submitting immortalized works.
 
