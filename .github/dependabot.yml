@@ -7,11 +7,3 @@ version: 2
 updates:
   - package-ecosystem: 'npm' # See documentation for possible values
     directory: '/front/app' # Location of package manifests
-    schedule:
-      interval: 'daily'
-  - package_manager: "ruby:bundler"
-    directory: '/api'    
-    update_schedule: "daily"
-default_assignees:
-  - Hoppy0616
-  
