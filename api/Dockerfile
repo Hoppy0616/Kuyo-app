@@ -3,8 +3,8 @@ FROM ruby:3.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir /app
 WORKDIR /app
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 

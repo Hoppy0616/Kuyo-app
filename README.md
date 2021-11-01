@@ -1,5 +1,7 @@
 <h1 style="text-align: center;"> Kuyo-app</h1>
 
+<p>⚠️ This app is in development! ⚠️</p>
+
 ## Overview
 This app is a web application for submitting immortalized works.
 
@@ -19,5 +21,6 @@ Docker
 docker-compose
 ### Front App
 - Next.js(using typescript)
+- tailWindCSS
 ### Backend App
 - Ruby on Rails (6.1.0,use api mode)
