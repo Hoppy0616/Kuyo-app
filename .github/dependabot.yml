@@ -9,3 +9,9 @@ updates:
     directory: '/front/app' # Location of package manifests
     schedule:
       interval: 'daily'
+  - package_manager: "ruby:bundler"
+    directory: '/api'    
+    update_schedule: "daily"
+default_assignees:
+  - Hoppy0616
+  
